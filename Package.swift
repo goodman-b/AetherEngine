@@ -56,7 +56,9 @@ let package = Package(
             name: "DolbyVisionStillReshaping",
             description: "Compile the CPU reshaping that turns a Dolby Vision Profile 5 / 10.0 frame into a still (scrub thumbnails, I-frame stills, held pictures)."
         ),
-        .default(enabledTraits: []),
+        // Personal branch: a path dependency cannot pass `traits:`, so this copy enables
+        // the object-audio components for whoever consumes it. Not for distribution.
+        .default(enabledTraits: ["TrueHDObjectAudio", "DTSXObjectAudio"]),
     ],
     dependencies: [
         // Minimal FFmpeg build (avcodec, avformat, avutil, swresample only).
