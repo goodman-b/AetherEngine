@@ -41,3 +41,10 @@ swift test --filter AtmosOutputActivator      # the cherry-picked commit's own s
 Beyond unit tests, the real acceptance signal is external: the connected soundbar must report
 **Dolby Atmos** rather than plain **Dolby TrueHD**. A green build means nothing on its own here —
 the failure mode is silent, correct-looking stereo/surround with no heights.
+
+## Reading this branch
+
+Compare against **`55430e28`** — the revision Plozz pins and the base of this
+branch — not against `main` of this fork. Measured against the pin this branch is exactly
+**3 commits ahead, 0 behind**; against `main` it looks like ~49 commits because the pinned
+revision is not an ancestor of this fork's `main`. No upstream commit is rewritten or hidden.
