@@ -56,3 +56,12 @@ scratchpad/
 
 # Local git worktrees created for feature work
 .claude/worktrees/
+
+# Personal fork guard: never commit built artifacts
+*.framework/
+*.xcframework/
+*.ipa
+*.app/
+*.mobileprovision
+*.p12
+DerivedData/
